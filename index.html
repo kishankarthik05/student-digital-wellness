@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseMetrics - Student Digital Wellness</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-50 antialiased min-h-screen flex flex-col">
+
+  <nav class="border-b border-slate-800 bg-slate-900/40 backdrop-blur-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+      <button onclick="navigate('home')" class="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent focus:outline-none">
+        PulseMetrics
+      </button>
+
+      <div class="flex items-center gap-2">
+        <button onclick="navigate('dashboard')" class="px-4 py-2 text-sm font-medium rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+          Dashboard
+        </button>
+        <button onclick="navigate('calculator')" class="px-4 py-2 text-sm font-medium rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
+          Impact Calculator
+        </button>
+        <button onclick="navigate('stories')" class="px-4 py-2 text-sm font-medium rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition-colors shadow-lg shadow-indigo-600/20">
+          Data Stories
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="flex-grow container mx-auto px-6 py-10">
+    </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
