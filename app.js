@@ -433,7 +433,7 @@ function calculateImpact(event) {
 
   const requestData = { age, usageHours, unlocks, studyHours, physicalHours };
 
-  fetch('https://student-wellness-backend-rlen.onrender.com', {
+  fetch('http://127.0.0.1:5000/predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(requestData)
