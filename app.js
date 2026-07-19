@@ -387,7 +387,7 @@ function calculateImpact(event) {
 
   const requestData = { age, usageHours, unlocks, studyHours, physicalHours };
 
-  fetch('https://student-wellness-backend.onrender.com/predict', {
+  fetch('https://student-wellness-backend-rlen.onrender.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(requestData)
