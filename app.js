@@ -387,7 +387,8 @@ function calculateImpact(event) {
 
   const requestData = { age, usageHours, unlocks, studyHours, physicalHours };
 
-  fetch('https://student-wellness-backend-rlen.onrender.com/predict', {
+  // Reverted target path back to standard local loop port environment
+  fetch('http://127.0.0.1:5000/predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(requestData)
@@ -476,7 +477,7 @@ function calculateImpact(event) {
           </div>
 
           <div class="flex justify-between items-center text-[10px] md:text-xs text-slate-500 pt-2 border-t border-white/5 font-medium tracking-wide">
-            <span>Server Channel: <span class="text-emerald-400 font-bold">Live</span></span>
+            <span>Server Channel: <span class="text-indigo-400 font-bold">Local Runtime</span></span>
             <span>Convergence: <span class="text-slate-300">${data.confidence || "Verified"}</span></span>
           </div>
         </div>
@@ -496,7 +497,7 @@ function calculateImpact(event) {
   })
   .catch(error => {
     console.error("Connection failed:", error);
-    resultContainer.innerHTML = `<p class="text-red-400 text-sm font-semibold">Connection failed. Check backend server logs.</p>`;
+    resultContainer.innerHTML = `<p class="text-red-400 text-sm font-semibold">Connection failed. Ensure local machine server is active.</p>`;
   });
 }
 
